@@ -223,6 +223,28 @@ const DoorDesigner = () => {
   
             <Button type="button" onClick={handleSendOrder}>Send Order</Button>
           </form>
+
+
+               {/* Selected Item and Total Price */}
+        {(selectedItem || selectedLockItem) && (
+          <Summary>
+            {selectedItem && (
+              <SummaryItem>
+                Selected Item: {selectedItem.name} - {selectedItem.manufacturer} (${selectedItem.price})
+              </SummaryItem>
+            )}
+            {selectedLockItem && (
+              <SummaryItem>
+                Selected Lock: {selectedLockItem.name} - {selectedLockItem.manufacturer} (${selectedLockItem.price})
+              </SummaryItem>
+            )}
+            <TotalPrice>Total Price: ${totalPrice}</TotalPrice>
+          </Summary>
+        )}
+          
+
+
+
   
           {/* Modal to Confirm Selections */}
           <Modal
