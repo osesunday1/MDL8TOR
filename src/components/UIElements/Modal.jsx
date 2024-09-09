@@ -55,7 +55,7 @@ const Modal = ({ isOpen, onClose, selections, totalPrice, onProceed }) => {
         <Title>Confirm Your Order</Title>
         {selections.map((item, index) => (
           <SummaryItem key={index}>
-            {item.name} - {item.manufacturer} (${item.price})
+            {item.name} - (${item.price})
           </SummaryItem>
         ))}
         <SummaryItem>

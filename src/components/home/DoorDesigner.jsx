@@ -153,7 +153,7 @@ const DoorDesigner = () => {
   
       selections.forEach((item, index) => {
         doc.setFontSize(12);
-        doc.text(`${item.name} - ${item.manufacturer} ($${item.price})`, 20, 30 + index * 10);
+        doc.text(`${item.name} - ($${item.price})`, 20, 30 + index * 10);
       });
   
       doc.setFontSize(14);
